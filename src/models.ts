@@ -1,28 +1,27 @@
-// filepath: src/models.ts
 // Enum для типів героїв
-enum HeroType {
+export enum HeroType {
     Warrior = "WARRIOR",
     Mage = "MAGE",
     Archer = "ARCHER"
 }
 
 // Enum для типів атак
-enum AttackType {
+export enum AttackType {
     Physical = "PHYSICAL",
     Magical = "MAGICAL",
     Ranged = "RANGED"
 }
 
-// Інтерфейс для характеристик героя
-interface HeroStats {
+// Interface для характеристик героя
+export interface HeroStats {
     health: number;
     attack: number;
     defense: number;
     speed: number;
 }
 
-// Інтерфейс для героя
-interface Hero {
+// Interface для героя
+export interface Hero {
     id: number;
     name: string;
     type: HeroType;
@@ -31,11 +30,9 @@ interface Hero {
     isAlive: boolean;
 }
 
-// Тип для результату атаки
-type AttackResult = {
+// Type для результату атаки
+export type AttackResult = {
     damage: number;
     isCritical: boolean;
     remainingHealth: number;
 }
-
-export { HeroType, AttackType, HeroStats, Hero, AttackResult };
